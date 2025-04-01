@@ -1,0 +1,181 @@
+/* General reset and default styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+form {
+  margin: 1rem 0;
+}
+
+.relative {
+  position: relative;
+}
+
+input[type="search"] {
+  width: 100%;
+  padding: 0.75rem 3rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  top: calc((44px - 20px) / 2);
+  left: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: calc((44px - 31px) / 2);
+  right: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Profile card styles */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-header {
+  display: flex;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.card .profile-img {
+  width: 117px;
+  height: 117px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 37px;
+}
+
+.card h5 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.bottom-section {
+  padding-left: 154px;
+}
+
+.card p {
+  margin: 0.25rem 0;
+  color: #666;
+}
+
+/* Repos, Followers, Following section */
+.card .stats {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.stats div {
+  text-align: center;
+}
+
+.stats div p:first-child {
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.stats div p:last-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Icons and links section */
+.links {
+  max-width: 429px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.left-col,
+.right-col {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.left-col div,
+.right-col div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .bottom-section {
+    padding-left: 0;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card .profile-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 19px;
+  }
+
+  .stats {
+    gap: 1rem;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  .left-col,
+  .right-col {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
