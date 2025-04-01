@@ -43,7 +43,8 @@ form.addEventListener("submit", (e) => {
         userLocation.innerText = data?.location?.trim()
           ? data.location
           : "No location available";
-      if (githubBlog) githubBlog.innerText = data.blog || "No blog available";
+          if (githubBlog) githubBlog.innerText = data.blog && githubBlog.href = data.blog || "No blog available";
+
       if (twitter) twitter.innerText = data.twitter_username || "No Twitter";
       if (github)
         github.innerText = data.login ? `@${data.login}` : "No GitHub username";
